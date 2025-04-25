@@ -17,3 +17,22 @@ ADD column winner varchar(15);
 
 ALTER table ipl_details 
 DROP column winner;
+
+alter table ipl_details 
+add column ticket_no int,
+add column impact_Player varchar(10),
+add column match_won int,
+add column match_lost int;
+
+alter table ipl_details
+rename column ticket_no to seat_number,
+rename column match_won to win,
+rename column match_lost to lose,
+rename column owner_name to owner;
+
+alter table ipl_details 
+modify column win varchar(20),
+modify column lose varchar(20);
+
+desc ipl_details;
+
