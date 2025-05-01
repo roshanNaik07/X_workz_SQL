@@ -16,6 +16,10 @@ ADD COLUMN official_language VARCHAR(25);
 ALTER TABLE country_info
 RENAME COLUMN area_km2 TO total_area;
 
+alter TABLE country_info
+rename column continent to countiries_continent,
+rename column population to country_population;
+
 ALTER TABLE country_info
 MODIFY COLUMN capital VARCHAR(25),
 MODIFY COLUMN currency VARCHAR(20),
